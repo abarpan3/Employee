@@ -1,0 +1,51 @@
+<div id="top">
+    <h1>Employee</h1>
+
+    <table class="table table-bordered table-hover table-dark">
+    <tbody>
+        <tr>
+            <td>Employee Name: </td>
+            <td><input type="text" name="ename" [(ngModel)]="name"></td>
+        </tr>
+
+        <tr>
+            <td>Employee ID: </td>
+            <td><input type="number" name="eid" [(ngModel)]="id"></td>
+        </tr>
+
+        <tr>
+            <td>Employee Salary: </td>
+            <td><input type="number" name="esal" [(ngModel)]="salary"></td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <button class="btn btn-primary" (click)="clickHandler()">Submit</button>
+            </td>
+        </tr>
+
+       
+    </tbody>
+    </table>
+</div>
+
+<div id="bottom">
+    <table class="table table-bordered table-hover table-light">
+        <thead class="thead-dark">
+            <th>Employee Name</th>
+            <th>Employee ID</th>
+            <th>Employee Salary</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let emp of array">
+                <td>{{emp.Ename}}</td>
+                <td>{{emp.Eid}}</td>
+                <td>{{emp.Esal}}</td>
+            </tr>
+        </tbody>
+        
+    </table>
+</div>
+
+
